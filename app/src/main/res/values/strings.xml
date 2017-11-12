@@ -37,4 +37,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="pink_palace_name">pink palace name</string>
     <string name="flag">flag</string>
+    <string name="item_desc">Item Description</string>
+    <string name="item_title">Exhibit Title</string>
 </resources>
