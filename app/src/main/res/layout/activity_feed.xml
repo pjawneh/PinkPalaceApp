@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DCF8E9"
+    tools:context="io.groupone.pinkpalaceapp.FeedActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="#FFF" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/avatar_img"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbar"
+        android:contentDescription="@string/profile_pic_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cultural_midsouth"
+        tools:src="@drawable/flag" />
+
+    <TextView
+        android:id="@+id/screen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/avatar_img"
+        android:paddingTop="5dp"
+        android:text="@string/username"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tweet_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/screen_name"
+        android:layout_below="@+id/screen_name"
+        android:layout_marginTop="8dp"
+        android:text="@string/tweet_text"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/desc_size"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package io.groupone.pinkpalaceapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -38,7 +39,15 @@ public class ExhibitsFragment extends Fragment {
         private ViewHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.exhibits_list, parent, false));
             exhibitImg = itemView.findViewById(R.id.list_img);
-            exhibitTitle = itemView.findViewById(R.id.list_title);
+            exhibitTitle = itemView.findViewById(R.id.tweet_content);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, ExhibitDetailView.class);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -61,6 +70,7 @@ public class ExhibitsFragment extends Fragment {
                 }
                 a.recycle();
         }
+
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

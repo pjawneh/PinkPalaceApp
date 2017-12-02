@@ -1,5 +1,7 @@
 package io.groupone.pinkpalaceapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -13,6 +15,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //create toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Create Navigation drawer and inflate layout
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        mDrawerLayout = findViewById(R.id.drawer_layout);
 
 // Adding menu icon to Toolbar
         ActionBar supportActionBar = getSupportActionBar();
@@ -46,21 +49,60 @@ public class MainActivity extends AppCompatActivity {
                     // This method will trigger on item Click of navigation menu
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // Set item in checked state
-                        menuItem.setChecked(true);
-                        // TODO: handle navigation
                         // Closing drawer on item click
                         mDrawerLayout.closeDrawers();
-                        return true;
+
+                        // Define Action for each navigation item
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_home: //home
+                                Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
+                                startActivity(homeIntent);
+                                return true;
+                            case R.id.nav_gallery: //speed gallery
+                                Toast.makeText(MainActivity.this,
+                                        "Not Yet Functional.",
+                                        Toast.LENGTH_SHORT).show();
+                                return true;
+                            case R.id.nav_feed: //feed
+                                Intent feedIntent = new Intent(MainActivity.this, FeedActivity.class);
+                                startActivity(feedIntent);
+                                return true;
+                            case R.id.nav_login: //login
+                                Toast.makeText(MainActivity.this,
+                                        "Not Yet Functional.",
+                                        Toast.LENGTH_SHORT).show();
+                                return true;
+                            case R.id.nav_join://join
+                                Toast.makeText(MainActivity.this,
+                                        "Not Yet Functional.",
+                                        Toast.LENGTH_SHORT).show();
+                                return true;
+                            case R.id.nav_contact: //contact
+                                Intent rateIntent = new Intent(Intent.ACTION_VIEW);
+                                rateIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.crescentdsgn.alqura"));
+                                startActivity(rateIntent);
+                                //intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.crescentdsgn.alquraa"));
+                                return true;
+
+                            case R.id.nav_donate: //donate
+                                Toast.makeText(MainActivity.this,
+                                        "Not Yet Functional.",
+                                        Toast.LENGTH_SHORT).show();
+                                return true;
+
+                            default:
+                                MainActivity home = new MainActivity();
+                                return true;
+                        }
                     }
                 });
 
         //create viewpager container for tab contents
-        ViewPager viewPager = (ViewPager) findViewById(R.id.container);
+        ViewPager viewPager = findViewById(R.id.container);
         setupViewPager(viewPager);
 
         // Create toolbar tabs
-        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
     }
 
