@@ -48,15 +48,19 @@
             android:textColor="@color/colorPrimaryDark"
             android:text="@string/item_title" />
 
-        <TextView
-            android:id="@+id/detail_desc"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingStart="@dimen/text_padding"
-            android:paddingEnd="@dimen/text_padding"
-            android:textSize="@dimen/desc_size"
-            android:text="@string/item_desc" />
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/detail_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="@dimen/text_padding"
+                android:paddingEnd="@dimen/text_padding"
+                android:textSize="@dimen/desc_size"
+                android:text="@string/item_desc" />
+        </ScrollView>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

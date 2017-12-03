@@ -18,13 +18,12 @@ public class ExhibitDetailView extends AppCompatActivity {
         setContentView(R.layout.exhibit_detail_view);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-
 
         int position = getIntent().getIntExtra(EXTRA_POSITION,0);
         Resources resources = getResources();
         String[] exhibits = resources.getStringArray(R.array.exhibits);
-        toolbar.setTitle(exhibits[position % exhibits.length]);
+        TextView exhibitTitle = findViewById(R.id.detail_title);
+        exhibitTitle.setText(exhibits[position % exhibits.length]);
 
         TypedArray mExhibitImg = resources.obtainTypedArray(R.array.exhibit_picture);
         ImageView exhibitPicture = findViewById(R.id.detail_img);

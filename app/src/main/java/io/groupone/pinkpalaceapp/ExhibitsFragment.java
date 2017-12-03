@@ -45,6 +45,7 @@ public class ExhibitsFragment extends Fragment {
                 public void onClick(View v) {
                     Context context = v.getContext();
                     Intent intent = new Intent(context, ExhibitDetailView.class);
+                    intent.putExtra(ExhibitDetailView.EXTRA_POSITION,getAdapterPosition());
                     context.startActivity(intent);
                 }
             });
