@@ -58,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(homeIntent);
                                 return true;
                             case R.id.nav_gallery: //speed gallery
-                                Toast.makeText(MainActivity.this,
-                                        "Not Yet Functional.",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent galleryIntent = new Intent(MainActivity.this, SpeedGallery.class);
+                                startActivity(galleryIntent);
                                 return true;
                             case R.id.nav_feed: //feed
                                 Intent feedIntent = new Intent(MainActivity.this, FeedActivity.class);

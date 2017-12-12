@@ -40,6 +40,9 @@
         <activity
             android:name=".Contact"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SpeedGallery"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
