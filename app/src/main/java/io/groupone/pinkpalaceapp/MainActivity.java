@@ -85,9 +85,8 @@ public class MainActivity extends AppCompatActivity {
                                 return true;
 
                             case R.id.nav_donate: //donate
-                                Toast.makeText(MainActivity.this,
-                                        "Not Yet Functional.",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent donateIntent = new Intent(MainActivity.this, Donate.class);
+                                startActivity(donateIntent);
                                 return true;
 
                             default:

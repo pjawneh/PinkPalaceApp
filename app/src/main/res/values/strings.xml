@@ -44,4 +44,13 @@
     <string name="profile_pic_desc">profile picture</string>
     <string name="twitter_username">memphismuseums</string>
     <string name="no_tweets">No Tweets</string>
+    <string name="donate_text">Donate</string>
+    <string name="donate_amount">$0.00</string>
+    <string name="card_name_field">Name on Card</string>
+    <string name="donation_amount_LBL">Donation Amount:</string>
+    <string name="or_separator">OR</string>
+    <string name="card_number_field">Card Number</string>
+    <string name="expiry_date_field">Expiry Date</string>
+    <string name="cvv_field">CVV</string>
+    <string name="donation_LBL">Donation</string>
 </resources>
