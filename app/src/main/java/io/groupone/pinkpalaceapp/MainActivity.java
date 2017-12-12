@@ -1,7 +1,6 @@
 package io.groupone.pinkpalaceapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -59,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(homeIntent);
                                 return true;
                             case R.id.nav_gallery: //speed gallery
-                                Toast.makeText(MainActivity.this,
-                                        "Not Yet Functional.",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent galleryIntent = new Intent(MainActivity.this, SpeedGallery.class);
+                                startActivity(galleryIntent);
                                 return true;
                             case R.id.nav_feed: //feed
                                 Intent feedIntent = new Intent(MainActivity.this, FeedActivity.class);
@@ -78,11 +76,10 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
                                 return true;
                             case R.id.nav_contact: //contact
-                                Intent rateIntent = new Intent(Intent.ACTION_VIEW);
-                                rateIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.crescentdsgn.alqura"));
-                                startActivity(rateIntent);
-                                //intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.crescentdsgn.alquraa"));
+                                Intent contactIntent = new Intent(MainActivity.this,Contact.class);
+                                startActivity(contactIntent);
                                 return true;
+
 
                             case R.id.nav_donate: //donate
                                 Intent donateIntent = new Intent(MainActivity.this, Donate.class);
