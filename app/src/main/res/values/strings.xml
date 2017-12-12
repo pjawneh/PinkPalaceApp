@@ -53,4 +53,6 @@
     <string name="expiry_date_field">Expiry Date</string>
     <string name="cvv_field">CVV</string>
     <string name="donation_LBL">Donation</string>
+    <string name="donation_desc">Thank you for making this tangible gift in support of our mission. We appreciate you!</string>
+    <string name="donation_information_LBL">Donation Information</string>
 </resources>
