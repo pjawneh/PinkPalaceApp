@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PinkPalaceApp.iml" filepath="$PROJECT_DIR$/PinkPalaceApp.iml" />
-      <module fileurl="file://C:\Users\Valued User\PinkPalaceApp\PinkPalaceApp.iml" filepath="C:\Users\Valued User\PinkPalaceApp\PinkPalaceApp.iml" />
       <module fileurl="file://E:\Documents\EDU\UofM_2018\Senior Year\Fall\MIS 4160\PinkPalaceApp\.idea\PinkPalaceApp.iml" filepath="E:\Documents\EDU\UofM_2018\Senior Year\Fall\MIS 4160\PinkPalaceApp\.idea\PinkPalaceApp.iml" />
+      <module fileurl="file://C:\Users\Valued User\PinkPalaceApp\PinkPalaceApp.iml" filepath="C:\Users\Valued User\PinkPalaceApp\PinkPalaceApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

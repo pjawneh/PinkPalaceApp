@@ -37,6 +37,9 @@
         <activity
             android:name=".Donate"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MemberProfile"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
