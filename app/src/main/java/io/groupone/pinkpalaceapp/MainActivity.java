@@ -71,15 +71,14 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
                                 return true;
                             case R.id.nav_join://join
-                                Toast.makeText(MainActivity.this,
-                                        "Not Yet Functional.",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent joinIntent = new Intent(MainActivity.this, JoinActivity.class);
+                                startActivity(joinIntent);
                                 return true;
+
                             case R.id.nav_contact: //contact
                                 Intent contactIntent = new Intent(MainActivity.this,Contact.class);
                                 startActivity(contactIntent);
                                 return true;
-
 
                             case R.id.nav_donate: //donate
                                 Intent donateIntent = new Intent(MainActivity.this, Donate.class);
