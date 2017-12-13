@@ -69,4 +69,11 @@
     <string name="hours_weekend">12pm - 5 pm</string>
     <string name="copy">OPERATED BY THE CITY OF MEMPHIS DIVISION OF PARKS AND NEIGHBORHOODS, AND MEMPHIS MUSEUMS, INC.</string>
     <string name="holidays">The Pink Palace is closed to the public on Thanksgiving Day, Christmas Day, and New Years Day  </string>
+    <string name="join">Join  </string>
+    <string name="joinFamily">Join The Pink Palace Family of Museums  </string>
+    <string name="first_name">First Name </string>
+    <string name="last_name">Last Name </string>
+    <string name="email_address">Email Address </string>
+    <string name="password">Password </string>
+    <string name="confirm_password">Confirm Password </string>
 </resources>
