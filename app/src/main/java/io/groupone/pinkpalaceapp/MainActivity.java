@@ -14,7 +14,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,9 +65,8 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(feedIntent);
                                 return true;
                             case R.id.nav_login: //login
-                                Toast.makeText(MainActivity.this,
-                                        "Not Yet Functional.",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                                startActivity(loginIntent);
                                 return true;
                             case R.id.nav_join://join
                                 Intent joinIntent = new Intent(MainActivity.this, JoinActivity.class);
